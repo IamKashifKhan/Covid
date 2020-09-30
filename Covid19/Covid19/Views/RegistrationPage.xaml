@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Covid19.Views.RegistrationPage">
+    <StackLayout>
+        <ScrollView>
+            <Grid Padding="30" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Entry TextColor="Black"  Grid.Row="0" Text="{Binding P_Name}"
+                        Placeholder="Patients Full Name "
+                        Visual="Material"
+                        HorizontalOptions="FillAndExpand"/>
+        <Entry TextColor="Black"  Grid.Row="1" Text="{Binding  P_Age}"
+                        Placeholder="Patients  Age "
+                        Visual="Material"
+                        Keyboard="Numeric"
+                        HorizontalOptions="FillAndExpand"/>
+        <Picker x:Name="Genderpicker" Title="Patients Gender" TextColor="Black"  ItemsSource="{Binding  GenderList}"  Grid.Row="2" 
+                        Visual="Material"
+                        HorizontalOptions="FillAndExpand">
+        </Picker>
+        <Entry TextColor="Black"  Grid.Row="3" Text="{Binding  Recomendations}"
+                        Placeholder="Recomendations"
+                        Visual="Material"
+                        Keyboard="Default"
+                        HorizontalOptions="FillAndExpand"/>
+         <Picker x:Name="Reasonpicker" Title="Reason for  Test" TextColor="Black"  ItemsSource="{Binding  ReasonList}"  Grid.Row="4" 
+                        Visual="Material"
+                        HorizontalOptions="FillAndExpand">
+        </Picker>
+        <Entry TextColor="Black"  Grid.Row="5" Text="{Binding  P_CNIC}"
+                        Placeholder="Patient CNIC"
+                        Visual="Material"
+                        Keyboard="Numeric"
+                        HorizontalOptions="FillAndExpand"/>
+        
+        <Entry TextColor="Black"  Grid.Row="6" Text="{Binding  P_Pnum}"
+                        Placeholder="Patient Primary Number"
+                        Visual="Material"
+                        Keyboard="Numeric"
+                        HorizontalOptions="FillAndExpand"/>
+        <Entry TextColor="Black"  Grid.Row="7" Text="{Binding  P_Pnum}"
+                        Placeholder="Patient Secondary Number"
+                        Visual="Material"
+                        Keyboard="Numeric"
+                        HorizontalOptions="FillAndExpand"/>
+        <Picker   x:Name="Districtpicker" Title="Patients District" TextColor="Black"  ItemsSource="{Binding  DistrictList}"  Grid.Row="8" 
+                        Visual="Material"
+                        HorizontalOptions="FillAndExpand">
+        </Picker>
+        <Entry TextColor="Black"  Grid.Row="9" Text="{Binding  P_Pnum}"
+                        Placeholder="Patient Address"
+                        Visual="Material"
+                        HorizontalOptions="FillAndExpand"/>
+        <Button Grid.Row="10" Visual="Material" Clicked="Button_Clicked" BackgroundColor="Transparent" TextColor="Green" Text="Submit" Margin="0" Padding="0" BorderColor="DarkGray" VerticalOptions="Center" Command="{Binding SubmitCommand}" HorizontalOptions="FillAndExpand"></Button>
+
+
+            </Grid>
+        </ScrollView>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:Covid19.Controls"
+             mc:Ignorable="d"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             x:Class="Covid19.Views.LoginPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand"  >
+        <ScrollView>
+        <Grid VerticalOptions="FillAndExpand" RowSpacing="10" Padding="20,0,20,50">
+            <Grid.RowDefinitions>
+                    <RowDefinition Height="200"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                    <Image Grid.Row="0" Source="Sindhlogo" Margin="20" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"></Image>
+                <Label Grid.Row="1" TextColor="Green" FontSize="Large" Text="COVID-19 Public Data Acquistion System" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand"></Label>
+                    <Entry TextColor="Black"  Grid.Row="2" Text="{Binding UserName}"
+                        Placeholder="Username"
+                        Visual="Material"
+                        HorizontalOptions="FillAndExpand"/>
+                    <Entry TextColor="Black"  Grid.Row="3"  Text="{Binding Password}"
+                        IsPassword="True"
+                        Placeholder="Password"
+                        Visual="Material"
+                        HorizontalOptions="FillAndExpand"/>
+                    <Button Grid.Row="4" Visual="Material" Clicked="Button_Clicked" BackgroundColor="Transparent" TextColor="Green" Text="SIGN IN" Margin="0" Padding="0" BorderColor="DarkGray" VerticalOptions="Center" Command="{Binding SubmitCommand}" HorizontalOptions="FillAndExpand"></Button>
+                    <Label Grid.Row="5" TextColor="DarkGray" FontSize="Body" Text="Powered by Government of sindh in technical collaboration with Neurocomputation Lab Ned University" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand"></Label>
+
+                </Grid>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

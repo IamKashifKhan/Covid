@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Covid19.Views.AssessmentPage">
+    <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <ListView   x:Name ="DPLvu" 
+                  HasUnevenRows="True" SeparatorVisibility="Default" 
+        SeparatorColor="#00c0ef" VerticalOptions="FillAndExpand" 
+         >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell >
+                        <ViewCell.View>
+                            <Grid Padding="10"  >
+                                <Frame Visual="Material" Padding="0" Margin="0" BackgroundColor="WhiteSmoke" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                    <Grid Padding="5,5,5,5"  >
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"></RowDefinition>
+                                            <RowDefinition Height="Auto"></RowDefinition>
+                                            <RowDefinition Height="Auto"></RowDefinition>
+                                            <RowDefinition Height="Auto"></RowDefinition>
+                                            <RowDefinition Height="Auto"></RowDefinition>
+                                        </Grid.RowDefinitions>
+                                        <Label Grid.Row="0"   FontSize="16" FontAttributes="Bold" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" IsVisible="True" Grid.Column="0"  Margin="5,0,0,0">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="Name: " TextColor="Black" FontAttributes="Bold"/>
+                                                    <Span Text="{Binding name}"/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+                                        <Label Grid.Row="1"   FontSize="16"  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" IsVisible="True" Grid.Column="0"  Margin="5,0,0,0">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="Age: " TextColor="Black" FontAttributes="Bold"/>
+                                                    <Span Text="{Binding age}"/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+                                        <Label Grid.Row="2"   FontSize="16"   VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" IsVisible="True" Grid.Column="0"  Margin="5,0,0,0">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                    <Span Text="Contact: " TextColor="Black" FontAttributes="Bold"/>
+                                                    <Span Text="{Binding contact}"/>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                        </Label>
+                                        <Label Grid.Row="3"   FontSize="16"  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" IsVisible="True" Grid.Column="0"  Margin="5,0,0,0">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="Mobile: " TextColor="Black" FontAttributes="Bold"/>
+                                                    <Span Text="{Binding district}"/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+                                        <Label Grid.Row="4"   FontSize="16"   VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" IsVisible="True" Grid.Column="0"  Margin="5,0,0,0">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="Diagnosed date: " TextColor="Black" FontAttributes="Bold"/>
+                                                    <Span Text="{Binding diagnosisDate}"/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+                                        <Label Grid.Row="5"   FontSize="16"   VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" IsVisible="True" Grid.Column="0"  Margin="5,0,0,0">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="Diagnosed date: " TextColor="Black" FontAttributes="Bold"/>
+                                                    <Span Text="{Binding diagnosisDate}"/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+                                        <Label Grid.Row="6"   FontSize="16"   VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" IsVisible="True" Grid.Column="0"  Margin="5,0,0,0">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="PatientType: " TextColor="Black" FontAttributes="Bold"/>
+                                                    <Span Text="{Binding patientType}"/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+
+                                    </Grid>
+                                </Frame>
+                            </Grid>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+     </Grid>
+      
+</ContentPage>

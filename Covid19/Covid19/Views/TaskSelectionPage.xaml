@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+              prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             NavigationPage.HasBackButton="False"
+             x:Name="TSP"
+             x:Class="Covid19.Views.TaskSelectionPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand"  >
+            <ScrollView>
+                <Grid VerticalOptions="FillAndExpand" RowSpacing="10" Padding="20,0,20,50">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="200"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Image Grid.Row="0" Source="Sindhlogo" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"></Image>
+                    <Label Grid.Row="1" TextColor="Green" FontSize="Large" Text="Pick A Task" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand"></Label>
+                    <Picker Title="Select Task" TextColor="Black"  SelectedIndex="{Binding MyProperty}" Grid.Row="2" SelectedIndexChanged="Picker_SelectedIndexChanged"
+                      
+                        Visual="Material"
+                        HorizontalOptions="FillAndExpand">
+                        <Picker.Items>
+                            <x:String>Registration</x:String>
+                            <x:String>Assesment</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+                    <Button Grid.Row="4" Command="{Binding LogoutCommand}" Visual="Material" Clicked="Button_Clicked" BackgroundColor="Transparent" TextColor="Green" Text="Logout" Margin="0" Padding="0" BorderColor="DarkGray" VerticalOptions="Center" HorizontalOptions="FillAndExpand"></Button>
+ 
+                </Grid>
+            </ScrollView>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
